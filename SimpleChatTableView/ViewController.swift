@@ -9,17 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
+  let navigationBarView = NavigationBarView()
+  let chatTableView = ChatTableView()
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+    view.backgroundColor = UIColor(hex: "#F4F3F1")
+    
+    view.addSubview(chatTableView)
+    
+    view.addSubview(navigationBarView)
   }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-
 
 }
 

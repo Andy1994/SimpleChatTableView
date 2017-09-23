@@ -15,7 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
+    
+    window = UIWindow(frame: UIScreen.main.bounds)
+    window?.backgroundColor = UIColor.black
+    window?.makeKey()
+    window?.makeKeyAndVisible()
+    
+    let tabBarController = ViewController()
+    window?.rootViewController = tabBarController
+    
+    startGDMonitoring()
     return true
   }
 
@@ -38,7 +47,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   }
 
   func applicationWillTerminate(_ application: UIApplication) {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    #if DEBUG
+      GDPerformanceMonitor.sharedInstance.stopMonitoring()
+    #endif
+  }
+  
+  func startGDMonitoring() {
+    #if DEBUG
+      GDPerformanceMonitor.sharedInstance.startMonitoring()
+      GDPerformanceMonitor.sharedInstance.configure(configuration: { (textLabel) in
+        textLabel?.backgroundColor = .black
+        textLabel?.textColor = .white
+        textLabel?.layer.borderColor = UIColor.black.cgColor
+      })
+      GDPerformanceMonitor.sharedInstance.appVersionHidden = true
+      GDPerformanceMonitor.sharedInstance.deviceVersionHidden = true
+    #endif
   }
 
 
