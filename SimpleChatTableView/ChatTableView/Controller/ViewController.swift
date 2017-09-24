@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     view.addSubview(chatTableView)
     
     view.addSubview(navigationBarView)
+    
+    chatTableView.chatModels = ChatModel.loadPlistData()
   }
 
   override func didReceiveMemoryWarning() {
