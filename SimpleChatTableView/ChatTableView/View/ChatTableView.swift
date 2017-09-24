@@ -13,6 +13,12 @@ let ChatTableViewImageViewSize: CGFloat = 48
 
 class ChatTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
   
+  var chatModels = [ChatModel]() {
+    didSet {
+      reloadData()
+    }
+  }
+  
   let reuseIdentifier = "ChatTableViewCell"
 
   override init(frame: CGRect, style: UITableViewStyle) {
@@ -29,11 +35,12 @@ class ChatTableView: UITableView, UITableViewDelegate, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return 100
+    return chatModels.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? ChatTableViewCell
+    cell?.chatModel = chatModels[indexPath.item]
     return cell!
   }
   

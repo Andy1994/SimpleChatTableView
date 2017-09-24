@@ -8,20 +8,36 @@
 
 import UIKit
 
-let ScreenWidth = UIScreen.main.bounds.width
-let ScreenHeight = UIScreen.main.bounds.height
-let FullScreen = UIScreen.main.bounds
-
 class ChatModel: NSObject {
   
+  var name = ""
   var avatar = ""
-  var title = ""
-  var pictureUrl = ""
-  var pictureWidth: CGFloat = 0
-  var pictureHeight: CGFloat = 0
+  var content = ""
+  var time = ""
   
-  class func getModels() -> [ChatModel] {
-    return []
+  init(data: NSDictionary) {
+    super.init()
+    name = data["name"]! as! String
+    avatar = data["avatar"]! as! String
+    content = data["content"]! as! String
+    time = data["time"]! as! String
+  }
+  
+  class func loadPlistData() -> [ChatModel] {
+    var chatModels = [ChatModel]()
+    if let path = Bundle.main.path(forResource: "ChatData", ofType: "plist") {
+      let data = NSArray(contentsOfFile: path)
+      for index in 0 ..< data!.count {
+        chatModels.append(ChatModel(data: data![index] as! NSDictionary))
+      }
+      for index in 0 ..< data!.count {
+        chatModels.append(ChatModel(data: data![index] as! NSDictionary))
+      }
+      for index in 0 ..< data!.count {
+        chatModels.append(ChatModel(data: data![index] as! NSDictionary))
+      }
+    }
+    return chatModels
   }
   
 }

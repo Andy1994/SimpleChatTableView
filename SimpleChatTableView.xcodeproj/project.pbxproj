@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0D67A7F51F762AE2009C5BC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67A7F41F762AE2009C5BC1 /* AppDelegate.swift */; };
-		0D67A7F71F762AE2009C5BC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67A7F61F762AE2009C5BC1 /* ViewController.swift */; };
 		0D67A7FC1F762AE2009C5BC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D67A7FB1F762AE2009C5BC1 /* Assets.xcassets */; };
 		0D67A7FF1F762AE2009C5BC1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D67A7FD1F762AE2009C5BC1 /* LaunchScreen.storyboard */; };
 		0D67A80D1F762C2E009C5BC1 /* GDMarginLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67A8081F762C2E009C5BC1 /* GDMarginLabel.swift */; };
@@ -50,12 +49,13 @@
 		0D67A86F1F764152009C5BC1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D67A86E1F764152009C5BC1 /* libz.tbd */; };
 		0D67A8711F764599009C5BC1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67A8701F764599009C5BC1 /* Extension.swift */; };
 		0D67A8731F764C2A009C5BC1 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0D67A8721F764C2A009C5BC1 /* test.jpg */; };
+		0D67A8751F7655D2009C5BC1 /* ChatData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D67A8741F7655D2009C5BC1 /* ChatData.plist */; };
+		0D67A8771F7657ED009C5BC1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D67A8761F7657ED009C5BC1 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0D67A7F11F762AE1009C5BC1 /* SimpleChatTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChatTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D67A7F41F762AE2009C5BC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D67A7F61F762AE2009C5BC1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
 		0D67A7FB1F762AE2009C5BC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D67A7FE1F762AE2009C5BC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D67A8001F762AE2009C5BC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -118,6 +118,8 @@
 		0D67A86E1F764152009C5BC1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		0D67A8701F764599009C5BC1 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		0D67A8721F764C2A009C5BC1 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = test.jpg; path = ../../../test.jpg; sourceTree = "<group>"; };
+		0D67A8741F7655D2009C5BC1 /* ChatData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ChatData.plist; sourceTree = "<group>"; };
+		0D67A8761F7657ED009C5BC1 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,7 +210,7 @@
 		0D67A8131F762F8D009C5BC1 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0D67A7F61F762AE2009C5BC1 /* ViewController.swift */,
+				0D67A8761F7657ED009C5BC1 /* ViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -216,6 +218,7 @@
 		0D67A8141F762F8D009C5BC1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0D67A8741F7655D2009C5BC1 /* ChatData.plist */,
 				0D67A8191F7632B3009C5BC1 /* ChatModel.swift */,
 			);
 			path = Model;
@@ -386,6 +389,7 @@
 			files = (
 				0D67A7FF1F762AE2009C5BC1 /* LaunchScreen.storyboard in Resources */,
 				0D67A8731F764C2A009C5BC1 /* test.jpg in Resources */,
+				0D67A8751F7655D2009C5BC1 /* ChatData.plist in Resources */,
 				0D67A7FC1F762AE2009C5BC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,8 +401,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D67A8771F7657ED009C5BC1 /* ViewController.swift in Sources */,
 				0D67A84F1F763E07009C5BC1 /* MKAnnotationView+YYWebImage.m in Sources */,
-				0D67A7F71F762AE2009C5BC1 /* ViewController.swift in Sources */,
 				0D67A81C1F763406009C5BC1 /* ChatTableView.swift in Sources */,
 				0D67A8491F763E07009C5BC1 /* YYCache.m in Sources */,
 				0D67A7F51F762AE2009C5BC1 /* AppDelegate.swift in Sources */,
@@ -592,6 +596,7 @@
 				0D67A8051F762AE2009C5BC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,10 @@
 
 import UIKit
 
+let ScreenWidth = UIScreen.main.bounds.width
+let ScreenHeight = UIScreen.main.bounds.height
+let FullScreen = UIScreen.main.bounds
+
 extension String {
   
   func sizeForFont(_ font: UIFont, size: CGSize) -> CGSize {
